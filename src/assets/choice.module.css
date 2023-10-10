@@ -1,0 +1,43 @@
+.choice_button {
+  /* position: absolute; */
+
+  width: 2em;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.choice_button:hover {
+  border-color: #646cff;
+}
+
+.choice_button--shadow-yellow {
+  box-shadow: #e2b501 0 0 10px 0.25rem;
+}
+
+.choice_button--shadow-green {
+  box-shadow: rgb(90, 224, 101) 0 0 10px 0.25rem;
+}
+
+.choice_button--shadow-yellow:hover,
+.choice_button--shadow-green:hover {
+  border-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .choice_button {
+    font-size: 5rem;
+  }
+}

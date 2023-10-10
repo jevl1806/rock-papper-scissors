@@ -6,7 +6,7 @@ enum AvailableChoices {
   SPOCK,
 }
 
-enum VersusResult {
+export enum VersusResult {
   WINNER,
   LOSER,
   TIE,

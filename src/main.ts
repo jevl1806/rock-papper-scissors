@@ -1,11 +1,19 @@
-import { initialRender } from "./setup";
+import { buildChoices, initialRender } from "./setup";
+import { startGame } from "./game";
 
-import "./style.css";
+import "@/assets/style.css";
+import "@/assets/layout.css";
 
 function main() {
-  let app = document.getElementById("app")!;
+  const choices = buildChoices();
 
-  initialRender(app);
+  initialRender(choices.map(([, li]) => li));
+  startGame(
+    choices.map(([choiceOption, li]) => [
+      choiceOption,
+      li.firstChild as HTMLButtonElement,
+    ])
+  );
 }
 
 main();

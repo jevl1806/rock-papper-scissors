@@ -11,9 +11,13 @@
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.3",
+    "@types/canvas-confetti": "^1.6.1",
     "happy-dom": "^12.9.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.0"
   }
 }

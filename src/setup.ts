@@ -1,24 +1,30 @@
 import { ChoiceOption, choiceOptions } from "./options";
 
-export function initialRender(app: HTMLElement) {
-  let userChoice: ChoiceOption | null = null;
+import choicesStyles from "@/assets/choice.module.css";
 
-  const choicesButtons: HTMLButtonElement[] = choiceOptions.map(
+export const buildChoices = () => {
+  const choicesItems: [ChoiceOption, HTMLLIElement][] = choiceOptions.map(
     (choiceOption) => {
+      const li = document.createElement("li");
       const button = document.createElement("button");
+
+      button.classList.add(choicesStyles.choice_button);
       button.innerHTML = `
         <span style="display: none;">${choiceOption.name}</span>
         <span>${choiceOption.icon}</span>
       `;
+      li.append(button);
 
-      button.addEventListener("click", () => {
-        userChoice = choiceOption;
-        console.log({ userChoice });
-      });
-
-      return button;
+      return [choiceOption, li];
     }
   );
 
-  app?.append(...choicesButtons);
+  return choicesItems;
+};
+
+export function initialRender(choices: HTMLLIElement[]) {
+  const containerChoices = document.querySelector(".container_choices");
+  if (!containerChoices) throw new Error("container_choices not found");
+
+  containerChoices.append(...choices);
 }

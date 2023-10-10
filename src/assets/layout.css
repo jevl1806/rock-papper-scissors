@@ -1,0 +1,38 @@
+.paragraph {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container_choices {
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  list-style: none;
+}
+
+.try_again_button {
+  width: 10rem;
+  height: 3em;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+  border-radius: 0.5em;
+
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.hidden {
+  display: none;
+}
