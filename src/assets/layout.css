@@ -4,6 +4,12 @@
   margin-bottom: 2rem;
 }
 
+.title {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
 .container_choices {
   max-width: 35rem;
   margin: 0 auto;
